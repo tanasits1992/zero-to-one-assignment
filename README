@@ -1,0 +1,20 @@
+I use Flask framework for python because it's light-weight and not connect to real database.
+
+Testing steps as bellow folows:
+    1. Make virtual environment for testing.
+    2. Access virtual environment.
+    3. Install library in requirement file.
+    4. Start project by command
+        'flask run' (PORT Default: 5000)
+
+Assignment 1:
+    It support send email by content and template but I have problem about authorization.
+
+Assignment 2:
+    I use file system for database system which store file in path: apps/api/contact/tmp.
+    I design database in relational structure which seperate two tables (groups, contacts)
+    by contacts table store primary key of group record.
+
+Assignment 3:
+    I declare 'TAX_RATES' variable in constants file (apps/commons/constants.py) for support 
+    tax rates changing. If tax rates are changed, will just update constants file.
