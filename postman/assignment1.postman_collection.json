@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "7aa7b1c9-d93d-4e18-8670-1b11383538c4",
+		"name": "assignment1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "notification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sendgrid_for_test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"to\": [\"tanasits.1992@example.com\"],\n\t\"from\": \"tanasits.1992@example.com\",\n\t\"subject\": \"Testing\",\n\t\"message\": \"test send email\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/notification",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notification_by_template",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"to\": [\"tanasits.1992@example.com\"],\n\t\"from\": \"tanasits.1992@example.com\",\n\t\"subject\": \"Testing\",\n\t\"templateID\": \"d-b31e77e0fe5a4f3f95fa148d66b3b50c\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/notification",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notification"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

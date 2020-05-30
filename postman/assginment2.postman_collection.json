@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "db22d3eb-d65d-4855-993d-de919132d962",
+		"name": "assginment2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list_group",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/group",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list_contact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/contact/?group_id=b971e8d9-6f09-4ba8-ab70-8e0d07ad1a05",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"contact",
+						""
+					],
+					"query": [
+						{
+							"key": "group_id",
+							"value": "b971e8d9-6f09-4ba8-ab70-8e0d07ad1a05"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Family\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/group",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"first_name\": \"Tanasit\",\n\t\"last_name\": \"Sukasem\",\n\t\"birth_date\": \"04/02/1992\",\n\t\"phone_numbers\": [\"0626019998\"],\n\t\"emails\": [\"tanasits.1992@gmail.com\"],\n\t\"urls\": [],\n\t\"group_id\": \"b971e8d9-6f09-4ba8-ab70-8e0d07ad1a05\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/contact",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_group",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Others\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/group/31623b1a-a34b-4a9d-9b34-3cf9dff1c27b",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"group",
+						"31623b1a-a34b-4a9d-9b34-3cf9dff1c27b"
+					]
+				},
+				"description": "must have group id in url"
+			},
+			"response": []
+		},
+		{
+			"name": "update_contact",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"first_name\": \"Tanasit\",\n\t\"last_name\": \"Sukasem\",\n\t\"birth_date\": \"04/02/1992\",\n\t\"phone_numbers\": [\"0626019998\"],\n\t\"emails\": [\"tanasits.1992@gmail.com\"],\n\t\"urls\": [],\n\t\"group_id\": \"b971e8d9-6f09-4ba8-ab70-8e0d07ad1a05\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/contact/4d29dd37-6547-4a55-ab97-f959648f9af4",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"contact",
+						"4d29dd37-6547-4a55-ab97-f959648f9af4"
+					]
+				},
+				"description": "must have group id in url"
+			},
+			"response": []
+		},
+		{
+			"name": "delete_group",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/group/31623b1a-a34b-4a9d-9b34-3cf9dff1c27b",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"group",
+						"31623b1a-a34b-4a9d-9b34-3cf9dff1c27b"
+					]
+				},
+				"description": "must have group id in url"
+			},
+			"response": []
+		},
+		{
+			"name": "delete_contact",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/contact/391c8650-1709-4057-b1d5-afe27ffb7eb1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"contact",
+						"391c8650-1709-4057-b1d5-afe27ffb7eb1"
+					]
+				},
+				"description": "must have group id in url"
+			},
+			"response": []
+		},
+		{
+			"name": "list_group_detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/list_group_detail",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"list_group_detail"
+					]
+				},
+				"description": "all related group"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
