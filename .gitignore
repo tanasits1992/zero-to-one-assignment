@@ -1,5 +1,5 @@
 # Basics
-__pycache__
+*.py[cod]
 
 # Vim
 *~
