@@ -1,0 +1,12 @@
+# Basics
+*.py[cod]
+__pycache__
+
+# Vim
+*~
+*.swp
+*.swo
+
+# virtual environments
+venv/*
+
